@@ -1,0 +1,225 @@
+/* STYLE SECTIONING TAGS */
+* { /* Reset the space of the webpage */
+   margin: 0px;
+   padding: 0px;
+}
+body {
+   background-color: #EBF5EE; 
+   font-family: "Kanit", sans-serif;
+}
+header {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/post-roe protest.jpg"); /*adds a translucent dark linear gradient over the image in the header*/
+   background-repeat: no-repeat;
+   background-attachment: fixed; /*makes sure the bg image doesn't scroll*/
+   background-size: cover; /*may crop the image to ensure it fits into the dimensions*/
+   padding: 5em;
+   height: 6em;
+   background-position: bottom;
+   color: #EBF5EE;
+}
+.index-header {
+   height: 12em;
+}
+
+/* STYLE TEXT */
+
+h1 {
+  color: #78A1BB;
+   font-family: "Bowlby One", sans-serif;
+   font-size: 50px;
+}
+h2 {
+   font-family: "Special Gothic Expanded One", sans-serif;
+   font-size: 35px;
+}
+h3 {
+   font-size: 30px;
+   margin-top: 2%;
+   margin-bottom: 2%;
+}
+p {
+   font-size: 22px;
+   margin-bottom: 2%;
+}
+/* STYLE IMAGES */
+.flexbox img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+.thirds img {
+   object-fit: contain;
+   height: 10em;
+}
+/* STYLE NAV BAR */
+
+nav {
+   position: sticky; /*navbar will scroll until it reaches the top of the screen, where it will become fixed*/
+   top: 0;
+   overflow: hidden;
+   background-color: #283044;
+   ul {
+      padding: 1em;
+      width: 100%;
+      text-align: center;
+   }
+   li {
+      display: inline;
+      margin: 0;
+   }
+   li a {
+      text-decoration: none; /*removes the underline from the links in navbar*/
+      padding: 1em;
+      padding-left: 3em;
+      padding-right: 3em;
+      color: #EBF5EE;
+      font-size: 22px;
+   }
+   li a:hover { /*changes the color of an element in the navbar if it is hovered over*/
+      background-color: #78A1BB;
+      transition: 0.3s ease;
+      color: #283044;
+   }
+}
+/* STYLE BUTTONS */
+button {
+   border: 0;
+   background-color: #BFA89E;
+   font-family: "Kanit", sans-serif;
+   font-size: 18px;
+   padding: 1em;
+   text-align: center;
+   border-radius: 1em;
+}
+button:hover {
+   cursor: pointer;
+   background-color: #8B786D;
+   transition: 0.3s ease;
+}
+a {
+   text-decoration: none;
+}
+/* ADD MORE! */
+.padding { /*adds space around elements*/
+   margin: 5%;
+}
+.button { /*centers and puts more space in between the buttons*/
+   margin: 1%;
+   text-align: center;
+}
+.bg { /*changes the background color of elements, adds padding, and rounds corners*/
+   background-color: #E0E2DA;
+   justify-content: center;
+   padding: 1em;
+   border-radius: 1em;
+   text-align: center;
+   padding-top: 2em;
+   padding-bottom: 2em;
+   margin: auto;
+   margin-bottom: 5%;
+   margin-top: 5%;
+}
+#intro {
+   background-color: #E0E2DA;
+   padding-top: 2em;
+   padding-bottom: 2em;
+   border-radius: 1em;
+   margin-bottom: 5%;
+}
+a { /*changes the color of the links*/
+   color: #283044;
+}
+.bg-blue {
+   background-color: #B2CBD5;
+   color: #283044;
+   button {
+      background-color:#78A1BB; 
+      color:#EBF5EE;
+   }
+   button:hover {
+      background-color: #283044;
+      transition: 0.3s ease;
+   }
+}
+#fact1, #fact2 {
+   font-size: 18px;
+   text-align: left;
+}
+.font20 {
+   font-size: 20px;
+}
+
+/*FLEX ITEMS*/
+
+.flexbox {
+   display: flex;
+   justify-content: center;
+}
+.flexbox > div { /*changes the properties of <div> elements only within parent elements with a .flexbox class*/
+   flex-basis: 20em;
+   margin-bottom: 2.5%; 
+   margin-top: 2.5%;
+   align-content: center;
+}
+.halves {
+   flex-basis: 45% !important;
+}
+
+
+/* alter layout based on screen size (920px is when the navbar becomes jumbled)*/
+
+@media only screen and (max-width: 920px) {
+   /*tags*/
+   .index-header { /*reset the height of headers so the text wont overflow*/
+      height: initial;
+   }
+   header {
+      height: initial;
+   }
+   /*text - decrease text size so that everything fits more comfortably on smaller screens*/
+   h1 {
+      font-size: 40px;
+   }
+   h2 {
+      font-size: 30px;
+   }
+   h3 {
+      font-size: 25px;
+   }
+   p {
+      font-size: 18px;
+   }
+   .font20 {
+      font-size: 16px;
+   }
+   /*navbar*/
+   nav { /*create vertical navbar and increase margin to make the links more accessible*/
+      position: initial;
+      li {
+         display: block;
+         margin: 2%;
+      }
+      li a {
+         font-size: 16px;
+      }
+   }
+   /*button*/
+   button {
+      font-size: 16px;
+   }
+   /*flex stuff - wraps content for better organization*/
+   .flexbox {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+   .flexbox > div { 
+      flex-basis: 100%;
+      margin-bottom: 2.5%; 
+      margin-top: 2.5%;
+      align-content: center;
+   }
+   .halves {
+      flex-basis: 90% !important;
+   }
+}

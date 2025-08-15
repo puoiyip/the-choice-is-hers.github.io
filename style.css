@@ -201,6 +201,7 @@ a { /*changes the color of the links*/
       }
       li a {
          font-size: 16px;
+         padding: 0.5em;
       }
    }
    /*button*/

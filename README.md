@@ -1,1 +1,2 @@
-# abortion-website
+# The Choice is Hers website
+I made an activism project as a part of the Web Development track for the Girls Who Code Pathways program. I've been following the progression of abortion laws across the country ever since Roe v. Wade was overturned in 2022, so I wanted to make a website to inform people of the basics about abortion and why it's so important to have access to it. I used CSS to style the text and images from HTML and JavaScript to add interactive buttons.
